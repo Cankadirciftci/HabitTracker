@@ -28,5 +28,5 @@ const habitLogSchema = new mongoose.Schema({
 habitLogSchema.index({ habitId: 1, date: 1 }, { unique: true }); // Aynı gün birden fazla log olmasın
 
 
-const habitLogModel = mongoose.model("HabitLog" , userSchema);
+const habitLogModel = mongoose.model("HabitLog" , habitLogSchema);
 export default habitLogModel;

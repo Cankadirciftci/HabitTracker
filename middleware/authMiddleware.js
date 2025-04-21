@@ -8,7 +8,7 @@ const verifyToken = (req , res ,next) => {
     }
     try{
         const decoded = jwt.verify(token, secret_key);
-        req.UserId = decoded.UserId;
+        req.userId = decoded.userId;
         next();
     }catch(error){
         return res.status(403).json({message : "Unauthorized"});
@@ -16,3 +16,5 @@ const verifyToken = (req , res ,next) => {
 }
 
 export default verifyToken;
+
+
